@@ -1,3 +1,4 @@
 #!/usr/bin/env ruby
 
-require "octrouble"
+require 'octrouble'
+Octrouble::Cli.start
