@@ -1,6 +1,7 @@
 require 'bundler/setup'
 require 'octrouble'
 require 'simplecov'
+require 'pry'
 
 SimpleCov.start
 
