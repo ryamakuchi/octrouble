@@ -24,12 +24,10 @@ module Octrouble
     private
 
     def get_issues(repo, page)
-      begin
-        Octokit.list_issues(repo, page: page)
-      rescue => e
-        puts "#{e.class}\n#{e.message}"
-        nil
-      end
+      Octokit.list_issues(repo, page: page)
+    rescue => e
+      puts "#{e.class}\n#{e.message}"
+      nil
     end
   end
 end
