@@ -5,7 +5,7 @@ require 'octokit'
 module Octrouble
   class Cli < Thor
     desc 'issues user/repo --page 1', 'get Issues data from GitHub API'
-    option :page
+    method_option :page, aliases: '-p'
 
     def issues(repo='rails/rails')
       page = options[:page] ? options[:page] : 1
