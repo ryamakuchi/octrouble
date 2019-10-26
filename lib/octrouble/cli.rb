@@ -11,8 +11,8 @@ module Octrouble
       page = options[:page] ? options[:page] : 1
       issues = get_issues(repo, page)
 
-      return if issues.nil?
       return puts "Issue is not found." if issues == []
+      return puts "Repository \'#{repo}\' is not found." if issues.nil?
 
       issues.each do | issue |
         puts "\"#{issue.title[0, 30]}\"," \
@@ -27,7 +27,6 @@ module Octrouble
       begin
         Octokit.list_issues(repo, page: page)
       rescue => e
-        puts "Repository \'#{repo}\' is not found."
         puts "#{e.class}\n#{e.message}"
         nil
       end
