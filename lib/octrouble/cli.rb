@@ -11,7 +11,7 @@ module Octrouble
       page = options[:page] ? options[:page] : 1
       issues = get_issues(repo, page)
 
-      return puts "Issue is not found." if issues == []
+      return puts 'Issue is not found.' if issues == []
       return puts "Repository \'#{repo}\' is not found." if issues.nil?
 
       issues.each do | issue |
