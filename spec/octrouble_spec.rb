@@ -1,9 +1,9 @@
 RSpec.describe Octrouble do
-  it "has a version number" do
+  it 'has a version number' do
     expect(Octrouble::VERSION).not_to be nil
   end
 
-  it "does something useful" do
-    expect(false).to eq(true)
+  describe Octrouble::Cli do
+    it 'pending'
   end
 end
