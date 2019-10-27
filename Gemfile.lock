@@ -40,6 +40,8 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.9.0)
     rspec-support (3.9.0)
+    rspec_junit_formatter (0.4.1)
+      rspec-core (>= 2, < 4, != 2.12.0)
     sawyer (0.6.0)
       addressable (~> 2.3.5)
       faraday (~> 0.8, < 0.10)
@@ -59,6 +61,7 @@ DEPENDENCIES
   pry-byebug
   rake (~> 10.0)
   rspec (~> 3.0)
+  rspec_junit_formatter
   simplecov
 
 BUNDLED WITH
